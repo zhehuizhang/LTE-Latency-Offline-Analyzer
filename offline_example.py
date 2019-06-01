@@ -14,6 +14,8 @@ from mobile_insight.monitor import OfflineReplayer
 # from ul_mac_latency_analyzer import UlMacLatencyAnalyzer
 # from lte_cnt_analyzer import LteCntAnalyzer
 from dl_lat_breakdown_analyzer import DlLatBreakdownAnalyzer
+from key_metric_analyzer import KeyMetricAnalyzer
+from ul_rlc_retx_analyzer import UlRLCReyxAnalyzer
 import cProfile
 import re
 import dis
@@ -72,8 +74,10 @@ def kpi_analysis(filename):
 
     # analyzer = LteCntAnalyzer()
     # analyzer = DlLatBdAnalyzer()
-    analyzer = DlLatBreakdownAnalyzer()
+    # analyzer = DlLatBreakdownAnalyzer()
+    # analyzer = KeyMetricAnalyzer()
     # analyzer = UlLatBreakdownAnalyzer()
+    analyzer = UlRLCReyxAnalyzer()
     analyzer.set_source(src)
     # analyzer = LtePdcpGapAnalyzer()
     # analyzer.set_source(src)
